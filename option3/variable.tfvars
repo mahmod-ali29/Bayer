@@ -1,0 +1,19 @@
+#PRD Environment variables
+vpcCIDRPRD = "10.0.0.0/16"
+PublicSubnet1PRD = "10.0.0.0/27"
+PublicSubnet2PRD = "10.0.0.32/27"
+PublicSubnet3PRD = "10.0.0.64/27"
+PrivateSubnet1PRD = "10.0.0.96/27"
+PrivateSubnet2PRD = "10.0.0.128/27"
+PrivateSubnet3PRD = "10.0.0.160/27"
+NATSubnetPRD = "10.0.0.192/27"
+
+#TST Environment variables
+vpcCIDRTST = "192.168.0.0/16"
+PublicSubnet1TST = "192.168.0.0/27"
+PublicSubnet2TST = "192.168.0.32/27"
+PublicSubnet3TST = "192.168.0.64/27"
+PrivateSubnet1TST = "192.168.0.96/27"
+PrivateSubnet2TST = "192.168.0.128/27"
+PrivateSubnet3TST = "192.168.0.160/27"
+NATSubnetTST = "192.168.0.192/27"
