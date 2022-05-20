@@ -1288,7 +1288,7 @@ resource "aws_security_group" "SGDMZ" {
   description  = "Allow SSH Traffic"
   ingress {
     description = "Allow SSH traffic"
-    cidr_blocks = [var.ExternalIP]
+    cidr_blocks = ["${var.ExternalIP}/32"]
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
