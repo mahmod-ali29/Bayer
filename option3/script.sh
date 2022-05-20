@@ -1,13 +1,9 @@
 read -p "Insert the DNS Hosted Zone:" dns_name
-
-#Get  your External IP address
-ExternalIP=$(curl -s ipinfo.io/ip)
+read -p "Insert your Public IP address:" ExternalIP
 
 #Run terraform script
 terraform init
 terraform apply -var-file=variable.tfvars -var="dns_name=$dns_name"  -var="ExternalIP=$ExternalIP" -auto-approve
-
-
 
 #Deploy the application to the environment
 #aws  elasticbeanstalk update-environment --environment-name $(terraform output env_namePRD) --version-label $(terraform output app_versionPRD)
