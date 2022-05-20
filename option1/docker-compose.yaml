@@ -9,7 +9,7 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-  web1:
+  web443:
     build: .
     command: python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem 0:443 --keep-meta-shutdown
     volumes:
@@ -22,7 +22,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
-  web2:
+  web80:
     build: .
     command: systemctl nginx stop
     command: python3 manage.py runserver 0.0.0.0:80
