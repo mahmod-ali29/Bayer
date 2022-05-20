@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 WORKDIR /code
-Run apt update -y && \
+RUN apt update -y && \
     apt install pip -y && \
     apt install mkcert  && \
     mkcert -install && \
