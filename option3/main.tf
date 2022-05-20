@@ -1374,16 +1374,24 @@ resource "aws_instance" "DMZEC2" {
   }
 }
 
-output "app_versionPRD" {
-  value = "${aws_elastic_beanstalk_application_version.EBAppVersionPRD.name}"
+#output "app_versionPRD" {
+#  value = "${aws_elastic_beanstalk_application_version.EBAppVersionPRD.name}"
+#}
+#output "env_namePRD" {
+#  value = "${aws_elastic_beanstalk_environment.EBEnvPRD.name}"
+#}
+#output "app_versionTST" {
+#  value = "${aws_elastic_beanstalk_application_version.EBAppVersionTST.name}"
+#}
+#output "env_nameTST" {
+#  value = "${aws_elastic_beanstalk_environment.EBEnvTST.name}"
+#}
+
+output "Django_PRD_URL" {
+  value = aws_elastic_beanstalk_environment.EBEnvPRD.cname
+  }
+output "Django_TST_URL" {
+  value = aws_elastic_beanstalk_environment.EBEnvTST.cname
 }
-output "env_namePRD" {
-  value = "${aws_elastic_beanstalk_environment.EBEnvPRD.name}"
-}
-output "app_versionTST" {
-  value = "${aws_elastic_beanstalk_application_version.EBAppVersionTST.name}"
-}
-output "env_nameTST" {
-  value = "${aws_elastic_beanstalk_environment.EBEnvTST.name}"
-}
+
 
