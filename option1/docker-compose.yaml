@@ -24,7 +24,6 @@ services:
       - db
   web80:
     build: .
-    #command: systemctl nginx stop
     command: python3 manage.py runserver 0.0.0.0:80
     volumes:
       - .:/code
