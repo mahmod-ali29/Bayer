@@ -7,7 +7,7 @@
 ```diff
 - Dockerfile
 - docker-compose.yaml
--requirements.txt
+- requirements.txt
 ```
 #Pre-requisits
 
